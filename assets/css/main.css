@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Walkway';
+    src: url('/fonts/WalkwaySemiBold.woff2') format('woff2'),
+        url('/fonts/WalkwaySemiBold.woff') format('woff'),
+        url('/fonts/WalkwaySemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Walkway';
+    src: url('/fonts/WalkwayBold.woff2') format('woff2'),
+        url('/fonts/WalkwayBold.woff') format('woff'),
+        url('/fonts/WalkwayBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Walkway';
+    src: url('/fonts/WalkwayBlack.woff2') format('woff2'),
+        url('/fonts/WalkwayBlack.woff') format('woff'),
+        url('/fonts/WalkwayBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --color-*: initial;
+
+    --color-white: #fff;
+
+    --color-primary-1: #5D7261;
+    --color-primary-2: #7E4C37;
+    --color-primary-3: #DCBFA5;
+
+    --color-secondary-1: #D6D1C4;
+    --color-secondary-2: #EACCCE;
+    --color-secondary-3: #574545;
+
+    --font-monserrat: "Montserrat", serif;
+    --font-walkway: "Walkway", sans-serif;
+}
+
+
+@layer base {
+    * {
+        -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+        @apply scroll-smooth;
+        -webkit-text-size-adjust: 100%;
+    }
+}
+
+@layer components {}
+
+@layer utilities {
+}
