@@ -43,7 +43,7 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
 </script>
 
 <template>
-    <footer id="contacto">
+    <footer id="contacto" class="bg-secondary-1">
         <div class="px-5">
             <div class="px-8 py-8 lg:px-16 lg:py-16 rounded-xl bg-primary-1">
                 <div class="max-w-full mx-auto">
@@ -73,7 +73,7 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
 
                         <div class="row-start-1 lg:row-start-auto">
                             <h3
-                                class="block text-3xl font-light tracking-widest md:text-3xl lg:text-5xl leading-tight text-white mb-10">
+                                class="block text-3xl font-black font-walkway tracking-wide md:text-3xl lg:text-5xl leading-tight text-white mb-10">
                                 Estoy a un mensaje de distancia
                             </h3>
 

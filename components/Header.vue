@@ -53,17 +53,23 @@ onMounted(() => {
                                     d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
+
                     </div>
 
                     <div
                         class="absolute inset-y-0 right-0 items-center hidden pr-2 lg:flex sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <div class="flex items-center justify-end space-x-6">
+                        <div class="flex items-center justify-end space-x-6 mr-12">
                             <a :href="item.link" target="_blank" rel="noopener noreferrer"
                                 v-for="(item, index) in store.socials" :key="index"
                                 class="text-secondary-1 bg-primary-1 size-8 flex items-center justify-center rounded-md hover:bg-primary-3 hover:text-secondary-3 transition-colors duration-300 ease-in-out">
                                 <Icon :name="item.icon" size="24px" />
                             </a>
                         </div>
+
+                        <button>
+                            <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt=""
+                                class="h-8 w-auto rounded-sm">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -102,8 +108,6 @@ onMounted(() => {
                                     Lorem 123
                                 </button>
                             </div>
-
-                            <LangSwitcher size="size-8" />
 
                             <div class="flex items-center justify-end space-x-3">
                                 <a href="#" target="_blank" rel="noopener noreferrer">
