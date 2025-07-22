@@ -1,7 +1,28 @@
 <script setup>
-const { messages, locale } = useI18n();
+const { messages, locale, t } = useI18n();
 
-const translatedItems = computed(() => messages.value[locale.value]?.home || {})
+const translatedItems = computed(() => messages.value[locale.value]?.home || {});
+
+useSeoMeta({
+  description: t('home.hero.title'),
+  ogTitle: 'Mimi Grullón',
+  ogDescription: t('home.hero.title'),
+  ogImage: '/Banner.jpg',
+  twitterTitle: 'Mimi Grullón',
+  twitterDescription: t('home.hero.title'),
+  twitterImage: '/Banner.jpg',
+  twitterCard: 'summary'
+})
+
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/ico',
+      href: '/favicon.ico'
+    }
+  ]
+})
 </script>
 
 <template>
