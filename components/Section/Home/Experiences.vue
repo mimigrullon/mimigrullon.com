@@ -63,6 +63,7 @@ for (const path in modules) {
                             <div v-for="(item, index) in content?.features"
                                 class="flex flex-row md:flex-col items-start justify-start md:justify-center w-full text-left md:w-1/3 gap-5">
                                 <component :is="iconComponents[item?.icon]" />
+                                {{ iconComponents[item?.icon] }}
                                 <h4 class="mt-2 text-sm font-medium lg:text-lg text-primary-1 font-monserrat"
                                     v-html="item?.label"></h4>
                             </div>
