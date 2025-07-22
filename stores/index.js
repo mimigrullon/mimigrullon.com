@@ -30,48 +30,5 @@ export const useMainStore = defineStore('index', {
             document.getElementById(id).scrollIntoView({ behavior: "smooth", block: "center" })
             this.navId = id
         },
-
-        async fetchData() {
-            // const runtimeConfig = useRuntimeConfig();
-
-            // try {
-            //     const [cases, services, clients, testimonials] = await Promise.all([
-            //         $fetch(`${runtimeConfig.public.wp.apiUrl}/cases/`, {
-            //             query: { status: 'publish' },
-            //             params: {
-            //                 _fields: 'title,menu_order,slug,acf',
-            //                 orderBy: 'menu_order',
-            //                 order: 'desc',
-            //             },
-            //         }),
-            //         $fetch(`${runtimeConfig.public.wp.apiUrl}/services/`, {
-            //             query: { status: 'publish' },
-            //             params: {
-            //                 _fields: 'title,slug,menu_order,acf',
-            //                 orderBy: 'menu_order',
-            //                 order: 'desc',
-            //             }
-            //         }),
-            //         $fetch(`${runtimeConfig.public.wp.apiUrl}/clients?_embed`, {
-            //             query: { status: 'publish' },
-            //         }),
-            //         $fetch(`${runtimeConfig.public.wp.apiUrl}/testimonials/`, {
-            //             query: { status: 'publish' },
-            //             params: {
-            //                 _fields: 'title,acf'
-            //             }
-            //         }),
-            //     ]);
-
-            //     const casesOrdered = cases.sort((a, b) => a.menu_order - b.menu_order);
-            //     const servicesOrdered = services.sort((a, b) => a.menu_order - b.menu_order);
-
-            //     this.initData = { cases: casesOrdered, services: servicesOrdered, clients, testimonials };
-
-            // } catch (error) {
-            //     console.error('Error fetching data <fetchData>:', error)
-            //     // this.error = error.message || 'An error occurred'
-            // }
-        },
     },
 });
