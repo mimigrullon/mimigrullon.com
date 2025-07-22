@@ -11,17 +11,18 @@ defineProps({
     <section :id="content?.id" class="p-5 h-screen">
         <div class="relative bg-primary-1 rounded-xl h-full overflow-hidden">
             <img :src="content?.image" :alt="content?.title"
-                class="object-cover object-right lg:object-center w-full h-full pointer-events-none">
-            <!-- <img src="/images/mimi-4.webp" alt="Hero background for mobile"
-                class="object-cover object-center w-full pointer-events-none lg:hidden"> -->
+                class="object-cover object-right lg:object-center w-full h-full pointer-events-none hidden lg:block">
 
-            <div class="absolute md:bottom-0 left-0 right-0 h-full top-1/2 md:top-0 transform -translate-y-1/2 md:translate-0">
+            <img src="/Banner-sin-mimi.jpg" :alt="content?.title"
+                class="object-cover object-right lg:hidden w-full h-full pointer-events-none">
+
+            <div
+                class="absolute md:bottom-0 left-0 right-0 h-full top-1/2 md:top-0 transform -translate-y-1/2 md:translate-0">
                 <div class="container h-full px-6 mx-auto lg:px-0">
                     <div class="grid h-full grid-cols-1 gap-0 lg:grid-cols-7">
                         <div class="hidden lg:col-span-4 lg:block" />
                         <div class="md:col-span-3">
-                            <div
-                                class="flex items-center justify-center w-full h-full text-center md:text-left">
+                            <div class="flex items-center justify-center w-full h-full text-center md:text-left">
                                 <div class="w-full">
                                     <div class="mb-6 gap-3 flex items-center md:justify-start justify-center flex-wrap">
                                         <span v-for="(tag, index) in content?.tags" :key="index"
@@ -33,7 +34,8 @@ defineProps({
                                         class="block text-2xl font-black tracking-wide md:text-4xl xl:text-5xl leading-tight text-white font-walkway">
                                         {{ content?.title }}
                                     </h2>
-                                    <div class="flex items-center justify-center md:justify-start flex-col md:flex-row space-y-6 md:space-y-0 space-x-6 mt-5 lg:mt-12">
+                                    <div
+                                        class="flex items-center justify-center md:justify-start flex-col md:flex-row space-y-6 md:space-y-0 space-x-6 mt-5 lg:mt-12">
                                         <!-- <a href="#"
                                             class="text-lg font-medium lg:text-2xl hover:text-primary-1 text-secondary-1 hover:underline underline-offset-8 transition ease-in-out duration-100">Conoce
                                             mi historia</a> -->

@@ -8,7 +8,9 @@ const availableLocales = computed(() => {
 </script>
 
 <template>
-    <NuxtLink :to="switchLocalePath(availableLocales[0].code)">
-        <img :src="availableLocales[0].flag" :alt="availableLocales[0].name" class="h-6 w-auto rounded-sm">
-    </NuxtLink>
+    <ClientOnly>
+        <NuxtLink :to="switchLocalePath(availableLocales[0].code)">
+            <img :src="availableLocales[0].flag" :alt="availableLocales[0].name" class="h-6 w-auto rounded-sm">
+        </NuxtLink>
+    </ClientOnly>
 </template>
