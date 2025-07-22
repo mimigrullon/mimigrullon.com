@@ -6,15 +6,13 @@ defineProps({
     }
 });
 
-const iconCache = {};
-function getIconComponent(name) {
-    if (!iconCache[name]) {
-        iconCache[name] = defineAsyncComponent(() =>
-            import(`~/components/icon/${name}.vue`)
-        )
-    }
-    return iconCache[name]
+const modules = import.meta.glob('~/components/icon/*.vue');
+const iconComponents = {};
+for (const path in modules) {
+  const name = path.split('/').pop().replace('.vue', '')
+  iconComponents[name] = defineAsyncComponent(modules[path])
 }
+
 </script>
 
 <template>
@@ -64,7 +62,7 @@ function getIconComponent(name) {
                         <div class="flex flex-col md:flex-row items-start justify-around w-full space-y-6 lg:space-y-0 mt-16 space-x-6">
                             <div v-for="(item, index) in content?.features"
                                 class="flex flex-row md:flex-col items-start justify-start md:justify-center w-full text-left md:w-1/3 gap-5">
-                                <component :is="getIconComponent(item?.icon)" />
+                                <component :is="iconComponents[item?.icon]" />
                                 <h4 class="mt-2 text-sm font-medium lg:text-lg text-primary-1 font-monserrat"
                                     v-html="item?.label"></h4>
                             </div>
