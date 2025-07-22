@@ -22,15 +22,15 @@ const menuItems = computed(() => messages.value[locale.value]?.menu || {})
             { 'bg-transparent py-14 px-8': offsetTop === 0 },
             { 'bg-white shadow-md shadow-primary-1/5 px-5 py-8': offsetTop > 0 },
         ]">
-            <div class="px-8">
+            <div class="px-5">
                 <div class="relative flex items-center justify-between">
                     <div class="flex items-center flex-shrink-0">
                         <button :class="[
                             { 'text-secondary-1': offsetTop === 0 },
                             { 'text-primary-1': offsetTop > 0 },
                         ]">
-                            <LogoIsotipo class="block w-auto h-10 lg:hidden" />
-                            <Logo class="hidden w-auto h-16 lg:block" />
+                            <!-- <LogoIsotipo class="block w-auto h-10 lg:hidden" /> -->
+                            <Logo class=" w-auto h-10 mt-2 md:h-16 lg:block" />
                         </button>
                     </div>
 
@@ -49,12 +49,16 @@ const menuItems = computed(() => messages.value[locale.value]?.menu || {})
 
                         <!-- Mobile menu button -->
                         <button type="button"
-                            class="inline-flex items-center justify-center rounded-md lg:hidden text-primary-1 hover:text-primary-2 focus:outline-none"
+                            :class="[
+                                'inline-flex items-center justify-center rounded-md lg:hidden focus:outline-none',
+                                { 'text-secondary-1 hover:text-secondary-2': offsetTop === 0 },
+                                { 'text-primary-1 hover:text-primary-2': offsetTop > 0 },
+                            ]"
                             aria-controls="mobile-menu" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <svg class="block w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
                                     d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>

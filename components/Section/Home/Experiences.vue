@@ -38,7 +38,7 @@ function getIconComponent(name) {
                             </div>
                         </div>
 
-                        <div class="flex justify-start w-full mt-16"><a
+                        <div class="justify-start w-full mt-16 hidden md:flex"><a
                                 href="https://www.linkedin.com/in/mimigrull%C3%B3n/" target="_blank"
                                 rel="noopener noreferrer"
                                 class="flex items-center justify-start text-xl font-bold underline underline-offset-4 lg:text-xl text-primary-2 hover:text-secondary-2"><svg
@@ -61,9 +61,9 @@ function getIconComponent(name) {
 
                         <p>{{ content?.text }}</p>
 
-                        <div class="flex items-start justify-around w-full lg:space-y-0 mt-16 space-x-6">
+                        <div class="flex flex-col md:flex-row items-start justify-around w-full space-y-6 lg:space-y-0 mt-16 space-x-6">
                             <div v-for="(item, index) in content?.features"
-                                class="flex flex-col items-start justify-center w-1/2 text-left lg:w-1/3">
+                                class="flex flex-row md:flex-col items-start justify-start md:justify-center w-full text-left md:w-1/3 gap-5">
                                 <component :is="getIconComponent(item?.icon)" />
                                 <h4 class="mt-2 text-sm font-medium lg:text-lg text-primary-1 font-monserrat"
                                     v-html="item?.label"></h4>

@@ -17,9 +17,9 @@ defineProps({
         <div class="mx-auto container lg:px-0">
             <div class="gap-16 md:gap-20 flex flex-col md:flex-row justify-between">
                 <div :class="['px-5 lg:px-0 w-full md:w-1/2']">
-                    <h2 class="text-base/7 font-semibold text-primary-3 font-montserrat">{{ content?.uppertitle }}</h2>
+                    <h2 class="text-base font-semibold text-primary-3 font-montserrat">{{ content?.uppertitle }}</h2>
                     <p
-                        class="block text-xl font-black tracking-wide md:text-4xl lg:text-5xl leading-tight text-primary-1 font-walkway mt-2">
+                        class="block text-2xl font-black tracking-wide md:text-4xl lg:text-5xl leading-tight text-primary-1 font-walkway mt-2">
                         {{ content?.title }}
                     </p>
 

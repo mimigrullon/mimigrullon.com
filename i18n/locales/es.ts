@@ -34,15 +34,15 @@ export default defineI18nLocale(async (locale) => {
         features: [
           {
             icon: "Idioma",
-            label: ` Idiomas<br>Español, Inglés y Frances`,
+            label: ` Idiomas<br class="hidden md:block">Español, Inglés y Frances`,
           },
           {
             icon: "Acompanamiento",
-            label: `Acompañamiento<br>en persona o remoto`,
+            label: `Acompañamiento<br class="hidden md:block">en persona o remoto`,
           },
           {
             icon: "Coach",
-            label: `Coach corporativo<br>individual y grupal`,
+            label: `Coach corporativo<br class="hidden md:block">individual y grupal`,
           },
         ],
       },
