@@ -43,13 +43,13 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
 </script>
 
 <template>
-    <footer id="contacto" class="bg-secondary-1">
+    <footer id="Contacto" class="bg-secondary-1 pt-16">
         <div class="px-5">
-            <div class="px-8 py-8 lg:px-16 lg:py-16 rounded-xl bg-primary-1">
+            <div class="p-5 md:p-8 lg:px-16 lg:py-16 rounded-xl bg-primary-1">
                 <div class="max-w-full mx-auto">
                     <div class="grid grid-cols-1 grid-rows-1 gap-16 lg:grid-rows-1 lg:grid-cols-2">
                         <div
-                            class="row-start-2 lg:row-start-1 bg-secondary-1 flex items-end pb-10 justify-center rounded-xl relative overflow-hidden">
+                            class="row-start-2 lg:row-start-1 bg-secondary-1 flex items-end pb-10 justify-center rounded-xl relative overflow-hidden min-h-96">
                             <img src="/9R8A3249-EDIT-web.png"
                                 class="absolute inset-0 object-[50%_18%] transform object-cover h-full w-full" alt="">
                             <div class="flex flex-col items-start justify-start max-w-sm relative">
@@ -73,7 +73,7 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
 
                         <div class="row-start-1 lg:row-start-auto">
                             <h3
-                                class="block text-3xl font-black font-walkway tracking-wide md:text-3xl lg:text-5xl leading-tight text-white mb-10">
+                                class="block text-4xl font-black font-walkway tracking-wide md:text-3xl lg:text-5xl leading-tight text-white mb-10">
                                 Estoy a un mensaje de distancia
                             </h3>
 
@@ -109,7 +109,7 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
 
                                 <div>
                                     <button type="submit"
-                                        class="inline-flex items-center justify-center w-4/5 px-6 py-3 text-base md:text-lg lg:text-xl font-semibold border border-transparent rounded-sm shadow-sm disabled:opacity-75 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer font-monserrat transition-colors duration-300 ease-in-out"
+                                        class="inline-flex items-center justify-center w-full md:w-4/5 px-6 py-3 text-base md:text-lg lg:text-xl font-semibold border border-transparent rounded-sm shadow-sm disabled:opacity-75 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer font-monserrat transition-colors duration-300 ease-in-out"
                                         :class="[
                                             { 'bg-primary-3 focus:ring-primary-3 pointer-events-none': !error && status === 'success' },
                                             { 'bg-secondary-1 focus:ring-secondary-1 text-primary-1 hover:bg-primary-2 hover:text-secondary-2': !data }
@@ -139,12 +139,13 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
                     </div>
                 </div>
             </div>
-            <div class="flex items-center justify-around w-full py-8 gap-x-12">
-                <p class="text-base text-left text-primary-1 whitespace-nowrap">
+
+            <div class="flex flex-col md:flex-row gap-12 items-center justify-around w-full py-8">
+                <p class="text-base text-center md:text-left text-primary-1 whitespace-nowrap">
                     <strong>Mimi Grullón ®</strong> <span class="hidden lg:inline">-</span><br class="lg:hidden">
                     Todos los derechos reservados <span class="hidden lg:inline">-</span><br class="lg:hidden">
                     Desarrollador por <a href="https://holistika.co" target="_blank" rel="noopener noreferrer"
-                        class="font-bold hover:underline underline-offset-2 hover:text-secondary-1">Holistika</a>
+                        class="font-bold hover:underline underline-offset-2 hover:text-primary-1">Holistika</a>
                 </p>
 
                 <div class="flex items-center justify-end space-x-6">

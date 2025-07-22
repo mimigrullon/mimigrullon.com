@@ -51,6 +51,10 @@
 
 
 @layer base {
+    :root {
+        scroll-padding-top: 100px;
+    }
+
     * {
         -webkit-font-smoothing: antialiased;
     }
@@ -63,5 +67,4 @@
 
 @layer components {}
 
-@layer utilities {
-}
+@layer utilities {}

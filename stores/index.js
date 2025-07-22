@@ -6,11 +6,7 @@ export const useMainStore = defineStore('index', {
 
         navId: null,
         mobileMenuOpen: false,
-        menu: [
-          "Experiencias",
-          "Noticias",
-          "Contacto",
-        ],
+
         socials: {
             instagram: {
                 link: "https://instagram.com/mimigrullon/",

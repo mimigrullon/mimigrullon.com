@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@nuxt/icon": "1.15.0",
@@ -23,5 +24,10 @@
     "vue-router": "^4.5.1",
     "vue3-carousel-nuxt": "^1.1.6"
   },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
+  "devDependencies": {
+    "@nuxtjs/prismic": "^4.0.0",
+    "@slicemachine/adapter-nuxt": "^0.3.81",
+    "slice-machine-ui": "^2.17.1"
+  }
 }

@@ -1,14 +1,19 @@
 <script setup>
 const store = useMainStore();
+const { messages, locale } = useI18n();
 
-let offsetTop = ref(0)
+let offsetTop = ref(0);
+
 onMounted(() => {
+    offsetTop.value = window.pageYOffset || document.documentElement.scrollTop;
+
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
         offsetTop.value = currentScroll;
     });
 });
+
+const menuItems = computed(() => messages.value[locale.value]?.menu || {})
 </script>
 
 <template>
@@ -31,7 +36,7 @@ onMounted(() => {
 
                     <div class="flex items-center justify-end flex-1 sm:items-stretch">
                         <div class="hidden mr-16 sm:ml-6 lg:flex md:space-x-10 lg:space-x-16 mt-1">
-                            <button v-for="(item, index) in store.menu" :class="[
+                            <a :href="`#${item}`" v-for="(item, index) in menuItems" :key="index" :class="[
                                 'inline-flex items-center text-xl focus:outline-none font-montserrat hover:underline font-normal underline-offset-8',
                                 { 'text-secondary-1 hover:border-secondary-1': offsetTop === 0 },
                                 { 'text-primary-1': offsetTop > 0 },
@@ -39,7 +44,7 @@ onMounted(() => {
                                 { '': store.navId !== item.toLowerCase() },
                             ]">
                                 {{ item }}
-                            </button>
+                            </a>
                         </div>
 
                         <!-- Mobile menu button -->
@@ -66,10 +71,7 @@ onMounted(() => {
                             </a>
                         </div>
 
-                        <button>
-                            <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt=""
-                                class="h-8 w-auto rounded-sm">
-                        </button>
+                        <LangSwitcher />
                     </div>
                 </div>
             </div>

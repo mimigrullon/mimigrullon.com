@@ -1,3 +1,4 @@
+import { apiEndpoint, repositoryName } from "./slicemachine.config.json";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
@@ -11,6 +12,7 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
+    "@nuxtjs/prismic"
   ],
 
   devServer: {
@@ -23,12 +25,13 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
+  // Flags: https://flagicons.lipis.dev/
   i18n: {
-    baseUrl: "http://localhost:3000",
+    baseUrl: "http://localhost:3001",
     defaultLocale: "es",
     locales: [
-      { code: "es", language: "es-ES", name: "Español", file: "es.json" },
-      { code: "en", language: "en-US", name: "English", file: "en.json" },
+      { code: "es", language: "es-do", name: "Español", file: "es.ts", flag: "https://flagicons.lipis.dev/flags/4x3/do.svg" },
+      { code: "en", language: "en-us", name: "English", file: "en.ts", flag: "https://flagicons.lipis.dev/flags/4x3/us.svg" },
     ],
     bundle: {
       optimizeTranslationDirective: false,
@@ -110,4 +113,8 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  prismic: {
+    endpoint: apiEndpoint || repositoryName
+  }
 });
