@@ -38,12 +38,10 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
         console.log('onResponseError', err)
     }
 })
-
-
 </script>
 
 <template>
-    <footer id="Contacto" class="bg-secondary-1 pt-16">
+    <footer :id="$t('home.contact.id')" class="bg-secondary-1 pt-16">
         <div class="px-5">
             <div class="p-5 md:p-8 lg:px-16 lg:py-16 rounded-xl bg-primary-1">
                 <div class="max-w-full mx-auto">

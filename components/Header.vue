@@ -2,6 +2,10 @@
 const store = useMainStore();
 const { messages, locale } = useI18n();
 
+const route = useRoute()
+
+const isHomePage = computed(() => route.path === '/' || route.path === '/en')
+
 let offsetTop = ref(0);
 
 onMounted(() => {
@@ -25,18 +29,18 @@ const menuItems = computed(() => messages.value[locale.value]?.menu || {})
             <div class="px-5">
                 <div class="relative flex items-center justify-between">
                     <div class="flex items-center flex-shrink-0">
-                        <button :class="[
+                        <NuxtLink :to="$localePath('index')" target="_parent" :class="[
                             { 'text-secondary-1': offsetTop === 0 },
                             { 'text-primary-1': offsetTop > 0 },
                         ]">
                             <!-- <LogoIsotipo class="block w-auto h-10 lg:hidden" /> -->
                             <Logo class=" w-auto h-10 mt-2 md:h-16 lg:block" />
-                        </button>
+                        </NuxtLink>
                     </div>
 
                     <div class="flex items-center justify-end flex-1 sm:items-stretch">
                         <div class="hidden mr-16 sm:ml-6 lg:flex md:space-x-10 lg:space-x-16 mt-1">
-                            <a :href="`#${item}`" v-for="(item, index) in menuItems" :key="index" :class="[
+                            <a  v-for="(item, index) in menuItems" :key="index" :href="$localePath({ path: '/', hash: `#${item.toLowerCase()}` })" :class="[
                                 'inline-flex items-center text-xl focus:outline-none font-montserrat hover:underline font-normal underline-offset-8',
                                 { 'text-secondary-1 hover:border-secondary-1': offsetTop === 0 },
                                 { 'text-primary-1': offsetTop > 0 },
@@ -48,13 +52,11 @@ const menuItems = computed(() => messages.value[locale.value]?.menu || {})
                         </div>
 
                         <!-- Mobile menu button -->
-                        <button type="button"
-                            :class="[
-                                'inline-flex items-center justify-center rounded-md lg:hidden focus:outline-none',
-                                { 'text-secondary-1 hover:text-secondary-2': offsetTop === 0 },
-                                { 'text-primary-1 hover:text-primary-2': offsetTop > 0 },
-                            ]"
-                            aria-controls="mobile-menu" aria-expanded="false">
+                        <button type="button" :class="[
+                            'inline-flex items-center justify-center rounded-md lg:hidden focus:outline-none',
+                            { 'text-secondary-1 hover:text-secondary-2': offsetTop === 0 },
+                            { 'text-primary-1 hover:text-primary-2': offsetTop > 0 },
+                        ]" aria-controls="mobile-menu" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <svg class="block w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -75,7 +77,7 @@ const menuItems = computed(() => messages.value[locale.value]?.menu || {})
                             </a>
                         </div>
 
-                        <LangSwitcher />
+                        <LangSwitcher v-if="isHomePage" />
                     </div>
                 </div>
             </div>

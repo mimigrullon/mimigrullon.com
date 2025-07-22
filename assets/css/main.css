@@ -59,12 +59,64 @@
         -webkit-font-smoothing: antialiased;
     }
 
+    p, a, span, li, date, button {
+        @apply font-monserrat;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        @apply font-walkway;
+    }
+
     html {
         @apply scroll-smooth;
         -webkit-text-size-adjust: 100%;
     }
 }
 
-@layer components {}
+@layer components {
+    .content {
+        @apply space-y-6;
+
+        & h2 {
+            @apply text-3xl tracking-tight text-pretty sm:text-4xl font-walkway font-black;
+        }
+
+        & h3 {
+            @apply text-2xl tracking-tight text-pretty sm:text-3xl font-walkway font-black;
+        }
+
+        & h4 {
+            @apply text-xl tracking-tight text-pretty sm:text-2xl font-walkway font-black;
+        }
+
+        & h5 {
+            @apply  text-lg tracking-tight text-pretty sm:text-xl font-walkway font-black;
+        }
+
+        & h6 {
+            @apply  text-base tracking-tight text-pretty sm:text-lg font-walkway font-black;
+        }
+
+        & p {
+            @apply  text-base font-normal font-monserrat;
+        }
+
+        & a {
+            @apply font-bold hover:underline underline-offset-2 text-primary-1;
+        }
+
+        & ol {
+            @apply list-decimal list-inside;
+        }
+
+        & ul {
+            @apply list-disc list-inside;
+        }
+
+        & img {
+            @apply aspect-video rounded-xl bg-primary-1 object-cover my-16;
+        }
+    }
+}
 
 @layer utilities {}

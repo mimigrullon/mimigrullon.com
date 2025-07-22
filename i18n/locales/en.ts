@@ -76,9 +76,13 @@ export default defineI18nLocale(async (locale) => {
         ],
       },
       news: {
+        id: "news",
         uppertitle: "Latest",
         title: "News and participation",
       },
+      contact: {
+        id: "contact"
+      }
     },
   };
 });

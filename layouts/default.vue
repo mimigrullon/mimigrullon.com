@@ -22,7 +22,7 @@ const title = computed(() => "Mimi Grullón");
 
         <Body>
             <Header />
-            <slot />
+            <NuxtPage />
             <Footer />
         </Body>
 
