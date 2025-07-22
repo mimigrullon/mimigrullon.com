@@ -33,15 +33,15 @@ export default defineI18nLocale(async (locale) => {
         text: "I have played key roles in the corporate world, entrepreneurship and social impact. My background includes CHANEL in Paris, the Dominican Delegation to UNESCO, and an active role in institutions such as PACAM, ICF and Dimitrova Foundation.",
         features: [
           {
-            icon: "Idioma",
+            icon: `idiomas.svg`,
             label: `Languages<br class="hidden md:block">Spanish, English and French`,
           },
           {
-            icon: "Acompanamiento",
+            icon: `acompanamiento.svg`,
             label: `Accompanying<br class="hidden md:block">in person or remotely`,
           },
           {
-            icon: "Coach",
+            icon: `coach.svg`,
             label: `Corporate<br class="hidden md:block">individual and group coach`,
           },
         ],

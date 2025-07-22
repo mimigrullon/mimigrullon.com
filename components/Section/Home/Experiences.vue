@@ -5,14 +5,6 @@ defineProps({
         required: true
     }
 });
-
-const modules = import.meta.glob('~/components/icon/*.vue');
-const iconComponents = {};
-for (const path in modules) {
-  const name = path.split('/').pop().replace('.vue', '')
-  iconComponents[name] = defineAsyncComponent(modules[path])
-}
-
 </script>
 
 <template>
@@ -24,7 +16,7 @@ for (const path in modules) {
                         <div>
 
                             <h2 class="text-base/7 font-semibold text-primary-3 font-montserrat">{{ content?.uppertitle
-                                }}</h2>
+                            }}</h2>
                             <p
                                 class="block text-xl font-black tracking-wide md:text-4xl lg:text-5xl leading-tight text-primary-1 font-walkway mt-2">
                                 {{ content?.title }}
@@ -59,11 +51,11 @@ for (const path in modules) {
 
                         <p>{{ content?.text }}</p>
 
-                        <div class="flex flex-col md:flex-row items-start justify-around w-full space-y-6 lg:space-y-0 mt-16 space-x-6">
+                        <div
+                            class="flex flex-col md:flex-row items-start justify-around w-full space-y-6 lg:space-y-0 mt-16 space-x-6">
                             <div v-for="(item, index) in content?.features"
                                 class="flex flex-row md:flex-col items-start justify-start md:justify-center w-full text-left md:w-1/3 gap-5">
-                                <component :is="iconComponents[item?.icon]" />
-                                {{ iconComponents[item?.icon] }}
+                                <img :src="`icons/${item?.icon}`" />
                                 <h4 class="mt-2 text-sm font-medium lg:text-lg text-primary-1 font-monserrat"
                                     v-html="item?.label"></h4>
                             </div>

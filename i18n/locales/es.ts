@@ -33,15 +33,15 @@ export default defineI18nLocale(async (locale) => {
         text: "He desempeñado roles clave en el mundo corporativo, el emprendimiento y el impacto social. Mi trayectoria incluye CHANEL en París, la Delegación Dominicana ante la UNESCO, y un rol activo en instituciones como PACAM, ICF y Fundación Dimitrova.",
         features: [
           {
-            icon: "Idioma",
+            icon: `idiomas.svg`,
             label: ` Idiomas<br class="hidden md:block">Español, Inglés y Frances`,
           },
           {
-            icon: "Acompanamiento",
+            icon: `acompanamiento.svg`,
             label: `Acompañamiento<br class="hidden md:block">en persona o remoto`,
           },
           {
-            icon: "Coach",
+            icon: `coach.svg`,
             label: `Coach corporativo<br class="hidden md:block">individual y grupal`,
           },
         ],
@@ -79,8 +79,8 @@ export default defineI18nLocale(async (locale) => {
       },
       news: {
         uppertitle: "Lo último",
-        title: "Actualidad y participación"
-      }
+        title: "Actualidad y participación",
+      },
     },
   };
 });
