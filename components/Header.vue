@@ -92,7 +92,7 @@ const menuItems = computed(() => messages.value[locale.value]?.menu || {})
                     class="fixed top-0 bottom-0 left-0 right-0 z-50 px-5 pt-8 origin-top-right bg-primary-1 sm:hidden">
                     <div class="relative h-full p-10 bg-white border rounded-t-lg shadow-xl border-gray-50">
                         <!-- Close mobile menu button -->
-                        <button type="button"
+                        <button type="button" @click.prevent="store.mobileMenuOpen = false"
                             class="absolute inline-flex items-center justify-center rounded-md top-3 right-3 text-primary-2 hover:text-secondary-2 focus:outline-none"
                             aria-controls="mobile-menu" aria-expanded="false">
                             <span class="sr-only">Close main menu</span>
