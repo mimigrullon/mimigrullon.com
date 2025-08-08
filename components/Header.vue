@@ -70,13 +70,13 @@ const menuItems = computed(() => messages.value[locale.value]?.menu || {})
 
                     <div
                         class="absolute inset-y-0 right-0 items-center hidden pr-2 lg:flex sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <div class="flex items-center justify-end space-x-6 mr-12">
+                        <!-- <div class="flex items-center justify-end space-x-6 mr-12">
                             <a :href="item.link" target="_blank" rel="noopener noreferrer"
                                 v-for="(item, index) in store.socials" :key="index"
                                 class="text-secondary-1 bg-primary-1 size-8 flex items-center justify-center rounded-md hover:bg-primary-3 hover:text-secondary-3 transition-colors duration-300 ease-in-out">
                                 <Icon :name="item.icon" size="24px" />
                             </a>
-                        </div>
+                        </div> -->
 
                         <LangSwitcher v-if="isHomePage" />
                     </div>
