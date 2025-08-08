@@ -46,7 +46,7 @@ const { data: news } = await useAsyncData("news", () => {
                 class="mx-auto w-full mt-10 grid max-w-2xl border-t border-primary-2 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none">
                 <Slide v-for="(item, index) in news?.results" :key="index" :mouse-wheel="{ threshold: 100 }">
                     <article
-                        class="relative flex max-w-xl flex-col items-start justify-between transition-colors duration-300 ease-in-out hover:bg-white p-5 rounded-xl">
+                        class="relative flex max-w-xl flex-col items-start justify-between h-full transition-colors duration-300 ease-in-out hover:bg-white p-5 rounded-xl">
                         <div class="flex flex-col md:flex-row items-start gap-4 text-xs">
                             <time :datetime="item?.data?.date" class="text-primary-1">{{ item?.data?.date }}</time>
                             <span
