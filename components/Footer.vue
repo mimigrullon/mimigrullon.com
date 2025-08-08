@@ -1,6 +1,8 @@
 <script setup>
 const store = useMainStore();
-const { locales, locale } = useI18n();
+const { locales, locale, t, messages } = useI18n();
+
+const translatedItems = computed(() => messages.value[locale.value]?.footer || {});
 
 const formData = ref({
     firstName: null,
@@ -48,8 +50,8 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
                     <div class="grid grid-cols-1 grid-rows-1 gap-16 lg:grid-rows-1 lg:grid-cols-2">
                         <div
                             class="row-start-2 lg:row-start-1 bg-secondary-1 flex items-end pb-10 justify-center rounded-xl relative overflow-hidden min-h-96">
-                            <img src="/9R8A3249-EDIT-web.png"
-                                class="absolute inset-0 object-[50%_18%] transform object-cover h-full w-full" alt="">
+                            <img :src="translatedItems?.image"
+                                class="absolute inset-0 object-[50%_18%] transform object-cover h-full w-full" :alt="translatedItems?.title">
                             <div class="flex flex-col items-start justify-start max-w-sm relative">
                                 <!-- <Logo class="text-white h-24" />
 
@@ -71,38 +73,38 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
 
                         <div class="row-start-1 lg:row-start-auto">
                             <h3
-                                class="block text-4xl font-black font-walkway tracking-wide md:text-3xl lg:text-5xl leading-tight text-white mb-10">
-                                Estoy a un mensaje de distancia
+                                class="block text-4xl font-bold font-montserrant tracking-wide md:text-3xl lg:text-5xl leading-tight text-white mb-10">
+                                {{ translatedItems?.title }}
                             </h3>
 
                             <form class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 sm:gap-x-5" @submit.prevent="">
                                 <div>
                                     <input id="name" type="text" name="name" required autocomplete="name"
                                         class="block w-full px-4 py-3 text-xl font-medium rounded-sm ring-2 ring-secondary-1 focus:ring-secondary-3 placeholder-secondary-1 text-secondary-1 outline-none"
-                                        placeholder="Nombre">
+                                        :placeholder="translatedItems?.nameField">
                                 </div>
 
                                 <div>
                                     <input id="lastname" type="text" name="lastname" required autocomplete="family-name"
                                         class="block w-full px-4 py-3 text-xl font-medium rounded-sm ring-2 ring-secondary-1 focus:ring-secondary-3 placeholder-secondary-1 text-secondary-1 outline-none"
-                                        placeholder="Apellido">
+                                        :placeholder="translatedItems?.lastnameField">
                                 </div>
 
                                 <div class="">
                                     <input id="email" type="email" name="email" required autocomplete="email"
                                         class="block w-full px-4 py-3 text-xl font-medium rounded-sm ring-2 ring-secondary-1 focus:ring-secondary-3 placeholder-secondary-1 text-secondary-1 outline-none"
-                                        placeholder="Correo electrónico">
+                                        :placeholder="translatedItems?.emailField">
                                 </div>
                                 <div>
                                     <input id="phone" required type="tel" name="phone" autocomplete="tel"
                                         class="block w-full px-4 py-3 text-xl font-medium rounded-sm ring-2 ring-secondary-1 focus:ring-secondary-3 placeholder-secondary-1 text-secondary-1 outline-none"
-                                        placeholder="Teléfono">
+                                        :placeholder="translatedItems?.phoneField">
                                 </div>
 
                                 <div class="sm:col-span-2">
                                     <textarea id="message" required name="message" rows="4"
                                         class="block w-full px-4 py-3 text-xl font-medium rounded-sm ring-2 ring-secondary-1 focus:ring-secondary-3 placeholder-secondary-1 text-secondary-1 outline-none"
-                                        placeholder="Mensaje" />
+                                        :placeholder="translatedItems?.message" />
                                 </div>
 
                                 <div>
@@ -113,7 +115,7 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
                                             { 'bg-secondary-1 focus:ring-secondary-1 text-primary-1 hover:bg-primary-2 hover:text-secondary-2': !data }
                                         ]">
                                         <span v-if="status === 'idle' || error">
-                                            Enviar
+                                            {{ translatedItems?.btnSubmit }}
                                         </span>
                                         <span v-if="status === 'pending'" class="flex items-center justify-center">
                                             <svg class="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
@@ -124,13 +126,15 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
                                                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                                             </svg>
 
-                                            Enviando...
+                                            {{ translatedItems?.btnSubmitting }}
                                         </span>
                                         <span v-if="status === 'success'">
-                                            Enviado
+                                            {{ translatedItems?.btnSubmitted }}
                                         </span>
                                     </button>
-                                    <p v-if="error" class="mt-2 text-white">Error, intente de nuevo.</p>
+                                    <p v-if="error" class="mt-2 text-white">
+                                        {{ translatedItems?.submitError }}
+                                    </p>
                                 </div>
                             </form>
                         </div>
@@ -141,8 +145,8 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
             <div class="flex flex-col md:flex-row gap-12 items-center justify-around w-full py-8">
                 <p class="text-base text-center md:text-left text-primary-1 whitespace-nowrap">
                     <strong>Mimi Grullón ®</strong> <span class="hidden lg:inline">-</span><br class="lg:hidden">
-                    Todos los derechos reservados <span class="hidden lg:inline">-</span><br class="lg:hidden">
-                    Desarrollador por <a href="https://holistika.co" target="_blank" rel="noopener noreferrer"
+                    {{translatedItems?.copyright }} <span class="hidden lg:inline">-</span><br class="lg:hidden">
+                    {{translatedItems?.poweredBy }} <a href="https://holistika.co" target="_blank" rel="noopener noreferrer"
                         class="font-bold hover:underline underline-offset-2 hover:text-primary-1">Holistika</a>
                 </p>
 

@@ -13,7 +13,7 @@ defineProps({
             :style="`background-image: url(${content?.image})`">
             <div class="relative max-w-7xl mx-auto py-16 px-10">
                 <h3
-                    class="text-2xl md:text-4xl lg:text-5xl font-black tracking-wide leading-tight sm:text-balance text-white font-walkway">
+                    class="text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide leading-tight sm:text-balance text-white font-montserrant">
                     {{ content?.quote }}
                 </h3>
                 <p v-if="content?.author" class="text-right text-white mt-6 text-lg">-- <b>{{ content?.author }}</b></p>

@@ -64,7 +64,7 @@
     }
 
     h1,h2,h3,h4,h5,h6 {
-        @apply font-walkway;
+        @apply font-monserrat;
     }
 
     html {
@@ -78,23 +78,23 @@
         @apply space-y-6;
 
         & h2 {
-            @apply text-3xl tracking-tight text-pretty sm:text-4xl font-walkway font-black;
+            @apply text-3xl tracking-tight text-pretty sm:text-4xl font-monserrat font-bold;
         }
 
         & h3 {
-            @apply text-2xl tracking-tight text-pretty sm:text-3xl font-walkway font-black;
+            @apply text-2xl tracking-tight text-pretty sm:text-3xl font-monserrat font-bold;
         }
 
         & h4 {
-            @apply text-xl tracking-tight text-pretty sm:text-2xl font-walkway font-black;
+            @apply text-xl tracking-tight text-pretty sm:text-2xl font-monserrat font-bold;
         }
 
         & h5 {
-            @apply  text-lg tracking-tight text-pretty sm:text-xl font-walkway font-black;
+            @apply  text-lg tracking-tight text-pretty sm:text-xl font-monserrat font-bold;
         }
 
         & h6 {
-            @apply  text-base tracking-tight text-pretty sm:text-lg font-walkway font-black;
+            @apply  text-base tracking-tight text-pretty sm:text-lg font-monserrat font-bold;
         }
 
         & p {

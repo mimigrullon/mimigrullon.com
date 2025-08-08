@@ -7,9 +7,9 @@ export default defineI18nLocale(async (locale) => {
         tags: [
           "Executive coach",
           "Social entrepreneur",
-          "Leader in governance and human transformation",
+          // "Leader in governance and human transformation",
         ],
-        image: "/Banner.jpg",
+        image: "/Banner_2.jpg",
         title:
           "Accompanying leaders and organizations towards their most authentic transformation",
         buttons: [
@@ -84,5 +84,20 @@ export default defineI18nLocale(async (locale) => {
         id: "contact"
       }
     },
+    footer: {
+      image: "/9R8A3249-EDIT-web.png",
+      title: "I'm just a message away",
+      nameField: "First name",
+      lastnameField: "Last name",
+      emailField: "Email address",
+      phoneField: "Phone number",
+      messageField: "Message",
+      btnSubmit: "Send",
+      btnSubmittign: "Sending...",
+      btnSubmitted: "Sent",
+      submitError: "Error, please try again.",
+      copyright: "All rights reserved",
+      poweredBy: "Developed by"
+    }
   };
 });

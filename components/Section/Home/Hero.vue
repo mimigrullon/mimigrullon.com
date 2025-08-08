@@ -31,7 +31,7 @@ defineProps({
                                         </span>
                                     </div>
                                     <h2
-                                        class="block text-2xl font-black tracking-wide md:text-4xl xl:text-5xl leading-tight text-white font-walkway">
+                                        class="block text-2xl font-bold tracking-wide md:text-4xl xl:text-5xl leading-tight text-white font-montserrant">
                                         {{ content?.title }}
                                     </h2>
                                     <div

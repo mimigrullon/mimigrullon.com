@@ -7,9 +7,9 @@ export default defineI18nLocale(async (locale) => {
         tags: [
           "Coach ejecutivo",
           "Emprendedora social",
-          "Líder en gobernanza y transformación humana",
+          // "Líder en gobernanza y transformación humana",
         ],
-        image: "/Banner.jpg",
+        image: "/Banner_2.jpg",
         title:
           "Acompañando líderes y organizaciones hacia su transformación más auténtica",
         buttons: [
@@ -86,5 +86,20 @@ export default defineI18nLocale(async (locale) => {
         id: "contacto"
       }
     },
+    footer: {
+      image: "/9R8A3249-EDIT-web.png",
+      title: "Estoy a un mensaje de distancia",
+      nameField: "Nombres",
+      lastnameField: "Apellidos",
+      emailField: "Correo electrónico",
+      phoneField: "Teléfono",
+      messageField: "Mensaje",
+      btnSubmit: "Enviar",
+      btnSubmittign: "Enviando...",
+      btnSubmitted: "Enviado",
+      submitError: "Error, intente de nuevo.",
+      copyright: "Todos los derechos reservados",
+      poweredBy: "Desarrollador por"
+    }
   };
 });

@@ -25,7 +25,7 @@ const { data: news } = await useAsyncData("news", () => {
             <div class="mx-auto max-w-2xl lg:mx-0">
                 <h2 class="text-base font-semibold text-primary-2 font-montserrat">{{ content?.uppertitle }}</h2>
                 <p
-                    class="block text-2xl font-black tracking-wide md:text-4xl lg:text-5xl leading-tight text-primary-1 font-walkway mt-2">
+                    class="block text-2xl font-bold tracking-wide md:text-4xl lg:text-5xl leading-tight text-primary-1 font-montserrant mt-2">
                     {{ content?.title }}
                 </p>
             </div>

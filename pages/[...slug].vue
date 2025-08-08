@@ -21,7 +21,7 @@ const { data } = await useAsyncData("new", () => {
                     class="relative z-10 rounded-full bg-gray-50 px-3 py-0.5 text-base font-medium text-secondary-1 bg-primary-1">{{
                         data?.data?.source }}</span>
             </div>
-            <h1 class="mt-6 text-4xl tracking-tight text-pretty sm:text-5xl font-walkway font-black">
+            <h1 class="mt-6 text-4xl tracking-tight text-pretty sm:text-5xl font-montserrant font-bold">
                 {{ data?.data?.title }}
             </h1>
             <p class="mt-6 text-xl font-monserrat">{{ data?.data?.intro[0].text }}</p>

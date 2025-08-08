@@ -7,10 +7,10 @@ useSeoMeta({
   description: t('home.hero.title'),
   ogTitle: 'Mimi Grullón',
   ogDescription: t('home.hero.title'),
-  ogImage: '/Banner.jpg',
+  ogImage: '/Banner_2.jpg',
   twitterTitle: 'Mimi Grullón',
   twitterDescription: t('home.hero.title'),
-  twitterImage: '/Banner.jpg',
+  twitterImage: '/Banner_2.jpg',
   twitterCard: 'summary'
 })
 
