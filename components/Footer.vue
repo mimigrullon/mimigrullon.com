@@ -51,7 +51,7 @@ const { error, data, execute, status } = useFetch(`/api/contact`, {
                         <div
                             class="row-start-2 lg:row-start-1 bg-secondary-1 flex items-end pb-10 justify-center rounded-xl relative overflow-hidden min-h-96">
                             <img :src="translatedItems?.image"
-                                class="absolute inset-0 object-[50%_18%] transform object-cover h-full w-full" :alt="translatedItems?.title">
+                                class="absolute inset-0 object-[30%_10%] transform object-cover h-full w-full" :alt="translatedItems?.title">
                             <div class="flex flex-col items-start justify-start max-w-sm relative">
                                 <!-- <Logo class="text-white h-24" />
 

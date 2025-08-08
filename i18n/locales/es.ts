@@ -87,7 +87,7 @@ export default defineI18nLocale(async (locale) => {
       }
     },
     footer: {
-      image: "/9R8A3249-EDIT-web.png",
+      image: "/9R8A2918-EDIT-web.webp",
       title: "Estoy a un mensaje de distancia",
       nameField: "Nombres",
       lastnameField: "Apellidos",
