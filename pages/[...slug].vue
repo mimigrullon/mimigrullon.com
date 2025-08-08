@@ -26,7 +26,7 @@ const { data } = await useAsyncData("new", () => {
             </h1>
             <p class="mt-6 text-xl font-monserrat">{{ data?.data?.intro[0].text }}</p>
 
-            <img :src="data?.data?.featured_image?.url" :alt="data?.data?.title"
+            <img v-if="data?.data?.featured_image" :src="data?.data?.featured_image?.url" :alt="data?.data?.title"
                 class="aspect-video rounded-xl bg-primary-1 object-cover my-16" />
 
             <div class="max-w-3xl content font-monserrat">
