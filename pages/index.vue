@@ -13,7 +13,6 @@ useSeoMeta({
   twitterImage: '/Banner_2.jpg',
   twitterCard: 'summary'
 })
-
 useHead({
   link: [
     {
