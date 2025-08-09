@@ -26,8 +26,10 @@ const { data } = await useAsyncData("new", () => {
             </h1>
             <p class="mt-6 text-xl font-monserrat">{{ data?.data?.intro[0].text }}</p>
 
-            <img v-if="data?.data?.featured_image" :src="data?.data?.featured_image?.url" :alt="data?.data?.title"
-                class="aspect-video rounded-xl bg-primary-1 object-cover my-16" />
+            <div v-if="Object.keys(data?.data?.featured_image).length !== 0" class="aspect-video overflow-hidden my-16 rounded-xl bg-primary-2">
+                <img :src="data?.data?.featured_image?.url" :alt="data?.data?.title"
+                class="object-center object-cover h-full w-full" />
+            </div>
 
             <div class="max-w-3xl content font-monserrat">
                 <PrismicRichText :field="data?.data?.content" />

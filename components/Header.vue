@@ -42,7 +42,7 @@ const menuItems = computed(() => messages.value[locale.value]?.menu || {})
                         <div class="hidden mr-16 sm:ml-6 lg:flex md:space-x-10 lg:space-x-16 mt-1">
                             <a v-for="(item, index) in menuItems" :key="index"
                                 :href="$localePath({ path: '/', hash: `#${item.toLowerCase()}` })" :class="[
-                                    'inline-flex items-center text-xl focus:outline-none font-montserrat hover:underline font-normal underline-offset-8',
+                                    'inline-flex items-center text-xl focus:outline-none font-montserrat hover:underline font-bold underline-offset-8',
                                     { 'text-secondary-1 hover:border-secondary-1': offsetTop === 0 },
                                     { 'text-primary-1': offsetTop > 0 },
                                     { 'font-semibold': store.navId === item.toLowerCase() },

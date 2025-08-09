@@ -35,12 +35,12 @@ defineProps({
 
                 </div>
 
-                <div :class="['px-5 lg:px-0 h-full w-full md:w-1/2', { 'order-last md:order-first': reverse }]">
+                <div :class="['px-5 lg:px-0 h-full aspect-4/3 w-full md:w-1/2', { 'order-last md:order-first': reverse }]">
                     <div
-                        class="relative isolate overflow-hidden h-full bg-secondary-2 rounded-xl drop-shadow-2xl drop-shadow-primary-1/15">
+                        class="relative isolate overflow-hidden h-full bg-muted rounded-xl drop-shadow-2xl drop-shadow-primary-1/15">
 
                         <img :src="content?.image" :alt="content?.title"
-                            class="object-cover object-center h-full w-full" />
+                            class="object-cover object-top h-full w-full" />
                     </div>
                 </div>
             </div>

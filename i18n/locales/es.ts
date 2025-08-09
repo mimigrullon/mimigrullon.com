@@ -27,14 +27,13 @@ export default defineI18nLocale(async (locale) => {
         id: "experiencias",
         uppertitle: "Sobre mí",
         title: "Una vida guiada por el propósito y la transformación",
-        intro:
-          "Coach ejecutiva certificada por INSEAD con una profunda vocación por el desarrollo humano. Mi enfoque psicodinámico permite descubrir y trabajar las dinámicas invisibles que influyen en las decisiones, los vínculos y los resultados dentro de organizaciones y equipos.",
+        intro: `Coach ejecutiva certificada por <b>INSEAD</b> con una profunda vocación por el desarrollo humano. Mi enfoque psicodinámico permite descubrir y trabajar las dinámicas invisibles que influyen en las decisiones, los vínculos y los resultados dentro de organizaciones y equipos.`,
         years: `Años <br class="hidden lg:block"> de experiencia`,
-        text: "He desempeñado roles clave en el mundo corporativo, el emprendimiento y el impacto social. Mi trayectoria incluye CHANEL en París, la Delegación Dominicana ante la UNESCO, y un rol activo en instituciones como PACAM, ICF y Fundación Dimitrova.",
+        text: `He desempeñado roles clave en el mundo corporativo, el emprendimiento y el impacto social. Mi trayectoria incluye <b>CHANEL</b> en París, la Delegación Dominicana ante la <b>UNESCO</b>, y un rol activo en instituciones como <b>PACAM</b>, <b>ICF</b> y <b>Fundación Dimitrova</b>.`,
         features: [
           {
             icon: `idiomas.svg`,
-            label: ` Idiomas<br class="hidden md:block">Español, Inglés y Frances`,
+            label: ` Idiomas<br class="hidden md:block">Español, Inglés y Francés`,
           },
           {
             icon: `acompanamiento.svg`,
@@ -49,12 +48,12 @@ export default defineI18nLocale(async (locale) => {
       quote: {
         id: "cita",
         image: "https://placehold.co/1024x720",
-        quote: `"Mi trabajo no trata solo de metas y resultados, sino de lo que ocurre debajo: las emociones, las historias no contadas, los sistemas que nos forman"`,
+        quote: `"Mi trabajo no trata solo de metas y resultados, sino de lo que ocurre debajo: las emociones, las historias no contadas, los sistemas que nos forman."`,
         author: "Mimi Grullón",
       },
       move: {
         id: "move",
-        image: "https://placehold.co/800x600",
+        image: "_GRAPH_es.png",
         uppertitle: "Qué me mueve",
         title: "Gobernanza con propósito, coaching con sentido humano",
         intro: "",
@@ -67,7 +66,7 @@ export default defineI18nLocale(async (locale) => {
       },
       projects: {
         id: "projects",
-        image: "https://placehold.co/800x600",
+        image: "/IMG_1486.webp",
         uppertitle: "Proyectos e Iniciativas",
         title: "Donde convergen la acción, la compasión y el liderazgo",
         intro: "",
@@ -83,8 +82,8 @@ export default defineI18nLocale(async (locale) => {
         title: "Actualidad y participación",
       },
       contact: {
-        id: "contacto"
-      }
+        id: "contacto",
+      },
     },
     footer: {
       image: "/9R8A2918-EDIT-web.webp",
@@ -99,7 +98,7 @@ export default defineI18nLocale(async (locale) => {
       btnSubmitted: "Enviado",
       submitError: "Error, intente de nuevo.",
       copyright: "Todos los derechos reservados",
-      poweredBy: "Desarrollador por"
-    }
+      poweredBy: "Desarrollador por",
+    },
   };
 });

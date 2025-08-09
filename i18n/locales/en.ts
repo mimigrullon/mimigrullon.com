@@ -28,9 +28,9 @@ export default defineI18nLocale(async (locale) => {
         uppertitle: "About me",
         title: "A life guided by purpose and transformation",
         intro:
-          "INSEAD-certified executive coach with a deep vocation for human development. My psychodynamic approach allows me to discover and work on the invisible dynamics that influence decisions, relationships and results within organizations and teams.",
+          "<b>INSEAD-certified</b> executive coach with a deep vocation for human development. My psychodynamic approach allows me to discover and work on the invisible dynamics that influence decisions, relationships and results within organizations and teams.",
         years: `Years <br class="hidden lg:block"> of experience`,
-        text: "I have played key roles in the corporate world, entrepreneurship and social impact. My background includes CHANEL in Paris, the Dominican Delegation to UNESCO, and an active role in institutions such as PACAM, ICF and Dimitrova Foundation.",
+        text: "I have played key roles in the corporate world, entrepreneurship and social impact. My background includes <b>CHANEL</b> in Paris, the Dominican Delegation to UNESCO, and an active role in institutions such as <b>PACAM</b>, <b>ICF</b> and <b>Dimitrova Foundation</b>.",
         features: [
           {
             icon: `idiomas.svg`,
@@ -53,7 +53,7 @@ export default defineI18nLocale(async (locale) => {
         author: "Mimi Grullón",
       },
       move: {
-        image: "https://placehold.co/800x600",
+        image: "_GRAPH_en.png",
         uppertitle: "What drives me",
         title: "Governance with purpose, coaching with human sense",
         intro: "",
@@ -65,7 +65,7 @@ export default defineI18nLocale(async (locale) => {
         ],
       },
       projects: {
-        image: "https://placehold.co/800x600",
+        image: "/IMG_1486.webp",
         uppertitle: "Projects and Initiatives",
         title: "Where action, compassion, and leadership converge",
         intro: "",
