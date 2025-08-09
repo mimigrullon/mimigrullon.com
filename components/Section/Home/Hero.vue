@@ -24,7 +24,7 @@ defineProps({
                         <div class="md:col-span-3">
                             <div class="flex items-end justify-center w-full h-full text-center md:text-left">
                                 <div class="w-full">
-                                    <div class="hidden md:block mb-6 gap-3 flex items-center md:justify-start justify-center flex-wrap">
+                                    <div class="hidden mb-6 gap-3 md:flex items-center md:justify-start justify-center flex-wrap">
                                         <span v-for="(tag, index) in content?.tags" :key="index"
                                             class="bg-primary-1 text-secondary-1 md:px-2.5 px-1 py-0.5 md:py-1.5 font-normal md:font-semibold text-xs rounded-md">
                                             {{ tag }}
