@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
-    "@nuxtjs/prismic"
+    "@nuxtjs/prismic",
   ],
 
   devServer: {
@@ -30,8 +30,20 @@ export default defineNuxtConfig({
     baseUrl: "http://localhost:3001",
     defaultLocale: "es",
     locales: [
-      { code: "es", language: "es-do", name: "Español", file: "es.ts", flag: "https://flagicons.lipis.dev/flags/4x3/do.svg" },
-      { code: "en", language: "en-us", name: "English", file: "en.ts", flag: "https://flagicons.lipis.dev/flags/4x3/us.svg" },
+      {
+        code: "es",
+        language: "es-do",
+        name: "Español",
+        file: "es.ts",
+        flag: "https://flagicons.lipis.dev/flags/4x3/do.svg",
+      },
+      {
+        code: "en",
+        language: "en-us",
+        name: "English",
+        file: "en.ts",
+        flag: "https://flagicons.lipis.dev/flags/4x3/us.svg",
+      },
     ],
     bundle: {
       optimizeTranslationDirective: false,
@@ -112,9 +124,14 @@ export default defineNuxtConfig({
         },
       },
     },
+    mailchimp: {
+      apiKey: process.env.MAILCHIMP_API_KEY,
+      listId: process.env.MAILCHIMP_LIST_ID,
+      dc: process.env.MAILCHIMP_DC,
+    },
   },
 
   prismic: {
-    endpoint: apiEndpoint || repositoryName
-  }
+    endpoint: apiEndpoint || repositoryName,
+  },
 });

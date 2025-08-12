@@ -103,7 +103,7 @@ export default defineI18nLocale(async (locale) => {
       phoneField: "Teléfono",
       messageField: "Mensaje",
       btnSubmit: "Enviar",
-      btnSubmittign: "Enviando...",
+      btnSubmitting: "Enviando...",
       btnSubmitted: "Enviado",
       submitError: "Error, intente de nuevo.",
       copyright: "Todos los derechos reservados",

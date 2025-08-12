@@ -14,6 +14,10 @@ const { data } = await useAsyncData("new", () => {
 
 <template>
     <section class="bg-white px-6 py-32 mt-32 lg:px-8">
+        <pre>
+            data
+            {{ data }}
+        </pre>
         <div class="mx-auto max-w-5xl text-base text-primary-1">
             <div class="flex flex-col md:flex-row items-start justify-between gap-4 text-base">
                 <time :datetime="data?.data?.date" class="text-primary-1">{{ data?.data?.date }}</time>
@@ -26,7 +30,7 @@ const { data } = await useAsyncData("new", () => {
             </h1>
             <p class="mt-6 text-xl font-monserrat">{{ data?.data?.intro[0].text }}</p>
 
-            <div v-if="Object.keys(data?.data?.featured_image).length !== 0" class="aspect-video overflow-hidden my-16 rounded-xl bg-primary-2">
+            <div v-if="!!data?.data?.featured_image && Object.keys(data?.data?.featured_image).length !== 0" class="aspect-video overflow-hidden my-16 rounded-xl bg-primary-2">
                 <img :src="data?.data?.featured_image?.url" :alt="data?.data?.title"
                 class="object-center object-cover h-full w-full" />
             </div>

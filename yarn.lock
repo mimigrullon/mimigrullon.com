@@ -584,6 +584,20 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@iconify-json/stash@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@iconify-json/stash/-/stash-1.2.4.tgz#2cbd44ad3861ed04f5d092f59ea72ad13ea1d15a"
+  integrity sha512-EO3iJTRdhrJPuNE11ZXk6KwIpQYrnOXCPtcKnklsBt8aSABseZ74caHua25ksl5MZfQi3nEuKgpqm6mxgQPOGg==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/typcn@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@iconify-json/typcn/-/typcn-1.2.2.tgz#8becbcf101a8d062478f940cc1c7c1beb588465c"
+  integrity sha512-I7ckhJgsuvzO1JPgEIsbcjvANVoCs3046w7IcdVpMpz7rJPp2r8+PajvpQ84vHYkCTti297NmOTuTARTiaabTw==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/collections@^1.0.563":
   version "1.0.566"
   resolved "https://registry.yarnpkg.com/@iconify/collections/-/collections-1.0.566.tgz#682771e221987faaca34f1f1bb16d1e69dda9041"
@@ -5658,6 +5672,11 @@ node-source-walk@^7.0.1:
   integrity sha512-3VW/8JpPqPvnJvseXowjZcirPisssnBuDikk6JIZ8jQzF7KJQX52iPFX4RYYxLycYH7IbMRSPUOga/esVjy5Yg==
   dependencies:
     "@babel/parser" "^7.26.7"
+
+nodemailer@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-7.0.5.tgz#3fa6607cab42401e4bedac9297e0aaa9ff84544b"
+  integrity sha512-nsrh2lO3j4GkLLXoeEksAMgAOqxOv6QumNRVQTJwKH4nuiww6iC2y7GyANs9kRAxCexg3+lTWM3PZ91iLlVjfg==
 
 nopt@^8.0.0:
   version "8.1.0"

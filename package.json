@@ -17,6 +17,7 @@
     "@pinia/nuxt": "0.11.1",
     "@tailwindcss/vite": "^4.1.11",
     "@vueuse/motion": "^3.0.3",
+    "nodemailer": "^7.0.5",
     "nuxt": "^3.17.6",
     "pinia": "^3.0.3",
     "tailwindcss": "^4.1.11",
@@ -26,6 +27,8 @@
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
   "devDependencies": {
+    "@iconify-json/stash": "^1.2.4",
+    "@iconify-json/typcn": "^1.2.2",
     "@nuxtjs/prismic": "^4.0.0",
     "@slicemachine/adapter-nuxt": "^0.3.81",
     "slice-machine-ui": "^2.17.1"
