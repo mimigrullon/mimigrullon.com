@@ -55,7 +55,7 @@ const { data: news } = await useAsyncData("news", () => {
                         </div>
                         <div class="group relative grow">
                             <h3 class="mt-3 text-lg/6 font-semibold text-primary-1 group-hover:text-primary-2">
-                                <NuxtLink :to="$localePath({ name: 'slug', params: { slug: item?.slugs?.[0] } })">
+                                <NuxtLink :to="$localePath({ name: 'slug', params: { slug: item?.uid } })">
                                     <span class="absolute inset-0"></span>
                                     {{ item?.data?.title }}
                                 </NuxtLink>
