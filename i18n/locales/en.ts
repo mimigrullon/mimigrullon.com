@@ -63,6 +63,15 @@ export default defineI18nLocale(async (locale) => {
           `<b>Real social impact:</b> Active engagement with vulnerable populations, especially young people with autism.`,
           `<b>Ethical education and leadership:</b> Ongoing training in the best schools in the world with a focus on sustainability, conscious luxury and governance.`,
         ],
+        list: [
+          "Family members",
+          "Owners (shareholders)",
+          "Individuals who work in the business",
+          "Family members who are owners",
+          "Owners who work in the business",
+          "Family members who work in the business",
+          "Owners who are family members and work in the business",
+        ],
       },
       projects: {
         image: "/IMG_1486.webp",
@@ -81,8 +90,8 @@ export default defineI18nLocale(async (locale) => {
         title: "News and participation",
       },
       contact: {
-        id: "contact"
-      }
+        id: "contact",
+      },
     },
     footer: {
       image: "/9R8A2918-EDIT-web.webp",
@@ -97,7 +106,7 @@ export default defineI18nLocale(async (locale) => {
       btnSubmitted: "Sent",
       submitError: "Error, please try again.",
       copyright: "All rights reserved",
-      poweredBy: "Developed by"
-    }
+      poweredBy: "Developed by",
+    },
   };
 });

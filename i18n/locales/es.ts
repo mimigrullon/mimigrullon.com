@@ -63,6 +63,15 @@ export default defineI18nLocale(async (locale) => {
           `<b>Impacto social real:</b> Compromiso activo con poblaciones vulnerables, especialmente jóvenes con autismo.`,
           `<b>Educación y liderazgo ético:</b> Formación constante en las mejores escuelas del mundo con enfoque en sostenibilidad, lujo consciente y gobernanza.`,
         ],
+        list: [
+          "Miembros de la familia",
+          "Propietarios (accionistas)",
+          "Personas que trabajan en la empresa",
+          "Miembros de la familia que son propietarios",
+          "Propietarios que trabajan en la empresa",
+          "Miembros de la familia que trabajan en la empresa",
+          "Propietarios que son miembros de la familia y trabajan en la empresa",
+        ],
       },
       projects: {
         id: "projects",
