@@ -1,5 +1,6 @@
 import { H3Event } from "h3";
 import crypto from "node:crypto";
+// import nodemailer from "nodemailer";
 
 export default defineEventHandler(async (event: H3Event) => {
   const config = useRuntimeConfig();
@@ -85,6 +86,23 @@ export default defineEventHandler(async (event: H3Event) => {
       console.warn("No se pudo guardar la nota en Mailchimp");
     });
   }
+
+  // 3. Enviar notificación
+  // if (upsertRes) {
+  //   const t = nodemailer.createTransport({
+  //     host: process.env.SMTP_HOST!,
+  //     port: Number(process.env.SMTP_PORT || 587),
+  //     secure: false,
+  //     auth: { user: process.env.SMTP_USER!, pass: process.env.SMTP_PASS! },
+  //   });
+
+  //   await t.sendMail({
+  //     from: `"Web" <${process.env.SMTP_USER}>`,
+  //     to: process.env.NOTIFY_TO!, // ej. ventas@tuempresa.com
+  //     subject: `Nuevo lead: ${emailLower} (${status})`,
+  //     text: `Nombre: ${firstName} ${lastName}\nEmail: ${emailLower}\nTel: ${phone}\nMensaje: ${message || "-"}\nEstado MC: ${status}\nIdioma: ${lang}`,
+  //   });
+  // }
 
   return {
     ok: true,
