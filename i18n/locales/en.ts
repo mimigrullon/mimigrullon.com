@@ -9,7 +9,7 @@ export default defineI18nLocale(async (locale) => {
           "Social entrepreneur",
           // "Leader in governance and human transformation",
         ],
-        image: "/Banner_2.jpg",
+        image: "/Banner_2.webp",
         title:
           "Accompanying leaders and organizations towards their most authentic transformation",
         buttons: [
@@ -53,7 +53,7 @@ export default defineI18nLocale(async (locale) => {
         author: "Mimi Grullón",
       },
       move: {
-        image: "_GRAPH_en.png",
+        image: "_GRAPH_en.webp",
         uppertitle: "What drives me",
         title: "Governance with purpose, coaching with human sense",
         intro: "",

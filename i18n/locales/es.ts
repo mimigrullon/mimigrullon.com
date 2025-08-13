@@ -9,7 +9,7 @@ export default defineI18nLocale(async (locale) => {
           "Emprendedora social",
           // "Líder en gobernanza y transformación humana",
         ],
-        image: "/Banner_2.jpg",
+        image: "/Banner_2.webp",
         title:
           "Acompañando líderes y organizaciones hacia su transformación más auténtica",
         buttons: [
@@ -53,7 +53,7 @@ export default defineI18nLocale(async (locale) => {
       },
       move: {
         id: "move",
-        image: "_GRAPH_es.png",
+        image: "_GRAPH_es.webp",
         uppertitle: "Qué me mueve",
         title: "Gobernanza con propósito, coaching con sentido humano",
         intro: "",
