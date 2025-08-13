@@ -35,15 +35,23 @@ defineProps({
 
                 </div>
 
-                <div :class="['px-5 lg:px-0 h-full aspect-4/3 w-full md:w-1/2', { 'order-last md:order-first': reverse }, {'md:-mt-32 mb-44': content?.list?.length > 0 && content?.list}]">
+                <div
+                    :class="['px-5 lg:px-0 h-full aspect-4/3 w-full md:w-1/2', { 'order-last md:order-first': reverse }, { 'md:-mt-32 mb-44': content?.list?.length > 0 && content?.list }]">
                     <div
                         class="relative isolate overflow-hidden h-full bg-muted rounded-xl drop-shadow-2xl drop-shadow-primary-1/15">
 
+                        <!-- <NuxtImg :src="content?.image" format="webp" preload
+                            fetchpriority="high" :alt="content?.title"
+                            class="object-cover object-bottom h-full w-full" /> -->
+                        
                         <img :src="content?.image" :alt="content?.title"
-                            class="object-cover object-top h-full w-full" />
+                            class="object-cover object-top h-full w-full" loading="lazy" />
                     </div>
-                    <ul v-if="content?.list?.length > 0 && content?.list" class="list-decimal flex items-center justify-start md:justify-center flex-wrap gap-x-12 gap-y-3 px-5 md:px-0 marker:text-secondary-1 marker:font-bold">
-                        <li v-for="item in content?.list" :key="item" class="md:whitespace-nowrap font-monserrat font-semibold text-primary-1 text-xs md:text-sm text-left md:text-center">{{ item }}</li>
+                    <ul v-if="content?.list?.length > 0 && content?.list"
+                        class="list-decimal flex items-center justify-start md:justify-center flex-wrap gap-x-12 gap-y-3 px-5 md:px-0 marker:text-secondary-1 marker:font-bold">
+                        <li v-for="item in content?.list" :key="item"
+                            class="md:whitespace-nowrap font-monserrat font-semibold text-primary-1 text-xs md:text-sm text-left md:text-center">
+                            {{ item }}</li>
                     </ul>
                 </div>
             </div>

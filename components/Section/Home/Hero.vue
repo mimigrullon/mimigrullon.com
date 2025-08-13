@@ -10,8 +10,12 @@ defineProps({
 <template>
     <section :id="content?.id" class="p-5 h-screen">
         <div class="relative bg-primary-1 rounded-xl h-full overflow-hidden">
-            <img :src="content?.image" :alt="content?.title"
-                class="object-cover object-[20%_50%] lg:object-center w-full h-full pointer-events-none">
+            <!-- <img :src="content?.image" :alt="content?.title"
+                class="object-cover object-[20%_50%] lg:object-center w-full h-full pointer-events-none"> -->
+
+            <NuxtImg :src="content?.image" width="1200" height="800"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1200px" format="webp" preload
+                fetchpriority="high" :alt="content?.title" class="object-cover object-[20%_50%] lg:object-center w-full h-full pointer-events-none" />
 
             <!-- <img src="/Banner-sin-mimi.jpg" :alt="content?.title"
                 class="object-cover object-right lg:hidden w-full h-full pointer-events-none"> -->
@@ -24,7 +28,8 @@ defineProps({
                         <div class="md:col-span-3">
                             <div class="flex items-end justify-center w-full h-full text-center md:text-left">
                                 <div class="w-full">
-                                    <div class="hidden mb-6 gap-3 md:flex items-center md:justify-start justify-center flex-wrap">
+                                    <div
+                                        class="hidden mb-6 gap-3 md:flex items-center md:justify-start justify-center flex-wrap">
                                         <span v-for="(tag, index) in content?.tags" :key="index"
                                             class="bg-primary-1 text-secondary-1 md:px-2.5 px-1 py-0.5 md:py-1.5 font-normal md:font-semibold text-xs rounded-md">
                                             {{ tag }}

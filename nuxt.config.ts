@@ -19,6 +19,14 @@ export default defineNuxtConfig({
     port: 3001,
   },
 
+  routeRules: {
+    '/': { prerender: true },            // home estática
+    '/en': { prerender: true },
+    '/blog/**': { isr: 3600 },           // páginas de noticias con ISR cada hora
+    '/api/**': { swr: 300 },             // caché 5 min en endpoints
+    '/admin/**': { ssr: false }          // desactiva SSR en backoffice
+  },
+
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
